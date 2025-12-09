@@ -1,0 +1,4 @@
+crewai>=0.1.0
+segmind>=0.0.1
+requests
+python-dotenv

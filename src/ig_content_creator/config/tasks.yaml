@@ -1,0 +1,34 @@
+# src/ig_content_creator/config/tasks.yaml
+research_task:
+  description: >
+    Research {topic}, gather 8-12 concise bullet points, 3 sources (title + url),
+    and 2 possible visual angles that could make a strong Instagram post.
+  expected_output: >
+    JSON with keys: bullets (list), sources (list of dict), visual_angles (list)
+  agent: researcher
+
+write_task:
+  description: >
+    Using research output, write:
+      - short_caption (1-2 lines),
+      - long_caption (3-6 sentences),
+      - hashtags (list of 8-12),
+      - CTA (single short line)
+  expected_output: >
+    JSON with keys: short_caption, long_caption, hashtags, cta
+  agent: writer
+
+review_task:
+  description: >
+    Edit and approve copy from writer. Return final_caption (full text), final_hashtags (list).
+  expected_output: >
+    JSON with keys: final_caption, final_hashtags, notes
+  agent: reviewer
+
+prompt_task:
+  description: >
+    Create 3 image prompts suitable for Segmind / Stable Diffusion / Gemini.
+    Each prompt should include subject, style, camera, lighting, color, and mood.
+  expected_output: >
+    JSON: prompts (list of 3 strings)
+  agent: image_prompt_generator
