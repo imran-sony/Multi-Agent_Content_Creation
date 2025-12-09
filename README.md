@@ -6,6 +6,7 @@ This project implements a complete multi-agent pipeline that automatically resea
 Built with CrewAI for orchestration and LLMs for agent intelligence.
 
 🚀 Features
+
 ✔ 1. Multi-Agent Workflow
 
 The system uses four specialized agents:
